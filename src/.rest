@@ -1,0 +1,47 @@
+@baseUrl = http://localhost:8080
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlclR5cGUiOiJlbXBsb3llciIsImlhdCI6MTcxNzkzNjE1NCwiZXhwIjoxNzE3OTM5NzU0fQ.ULItsFky4bsrRAybDHtjlId27-oTWQow0Dhfki0pUAM
+
+# @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExLCJlbWFpbCI6InRlc3R1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzE3MTE5OTM0LCJleHAiOjE3MTcxMjM1MzR9.XXjpIIjNjAMDisplmj39GxuNYoAm6CwF7aEHv9IrMyI
+### Test Sign Up
+POST {{baseUrl}}/mlab/signup
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "testuser@test.com",
+  "password": "password123"
+}
+
+### Test Sign In
+POST {{baseUrl}}/signin
+Content-Type: application/json
+
+{
+  "identifier": "mlab@mlab.com",
+  "password": "admin123"
+}
+
+### Get All Messages
+GET {{baseUrl}}/messages
+Authorization: Bearer {{token}}
+
+### Get protected Messages
+GET {{baseUrl}}/messages
+Authorization: Bearer {{token}}
+
+### Post a New Message
+POST {{baseUrl}}/messages
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "content": "Hello, this is a test message!"
+}
+### Update Username
+POST {{baseUrl}}/admin/profile
+Content-Type: application/json
+
+{
+  "id": 2,
+  "content": "Hello, this is a test message!"
+}

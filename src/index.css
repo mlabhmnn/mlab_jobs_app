@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+@media (max-width: 768px) {
+  /* Responsive styles for smaller screens */
+}
+
+@media (min-width: 768px) {
+  /* Responsive styles for larger screens */
+}
+
+/* Add any custom styles here */
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(10px);
+}
+
+@layer components {
+  .sidebar-icon {
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg bg-sky-400 text-white;
+  }
+}
