@@ -1,18 +1,18 @@
 
 
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { signout } from "../redux/rdx_features/auth/authSlice";
+// import { useDispatch } from "react-redux";
+// import { signout } from "../redux/rdx_features/auth/authSlice";
 
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleSignOut = () => {
-    dispatch(signout());
-  }
+  // const handleSignOut = () => {
+  //   dispatch(signout());
+  // }
 
   return (
     <nav className="bg-gray-800 p-4 sticky container-auto">
@@ -88,9 +88,10 @@ const Navbar = () => {
           >
             DASHBOARD
           </Link>
-          <button className="bg-gray-300 p-2 m-1 rounded-sm" onClick={handleSignOut}>
+          {/* <button className="bg-gray-300 p-2 m-1 rounded-sm" onClick={handleSignOut}>
         Sign Out
-      </button>
+      </button> */}
+        <button onClick={() => console.log('Click Acccount!')}>ACCOUNT</button>
 
         </div>
       </div>

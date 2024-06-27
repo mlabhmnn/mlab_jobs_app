@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  token: localStorage.getItem("mlab") || null,
+  token:  null,
   loading: false,
   error: null,
   mesg: null,

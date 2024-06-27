@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Optional: Add custom styles */
+body {
+  transition: background-color 0.5s, color 0.5s;
+}
+
 body {
   font-family: Georgia, Cambria, Times New Roman, Times, serif;
 }
